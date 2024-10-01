@@ -18,7 +18,7 @@ public class Caller {
                 .build();                                                       // Build request
 
         // Response
-        HttpResponse<String> response = null;
+        HttpResponse<String> response;
         try {
             response = HttpClient.newHttpClient().send(request, HttpResponse.BodyHandlers.ofString());
             return response.body();
